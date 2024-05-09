@@ -14,8 +14,8 @@ import lombok.NoArgsConstructor;
 public class Student {
 
     @Id
-    @SequenceGenerator(name = "customer_id_sequence", sequenceName = "customer_id_sequence")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "customer_id_sequence")
+    @SequenceGenerator(name = "student_id_sequence", sequenceName = "student_id_sequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "student_id_sequence")
     private Long id;
     private String firstName;
     private String lastName;

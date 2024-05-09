@@ -9,6 +9,7 @@
   <packaging>pom</packaging>
   <modules>
     <module>student</module>
+    <module>teacher</module>
   </modules>
 
   <name>myApp</name>
