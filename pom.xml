@@ -10,6 +10,7 @@
   <modules>
     <module>student</module>
     <module>teacher</module>
+    <module>identityVerify</module>
   </modules>
 
   <name>myApp</name>
