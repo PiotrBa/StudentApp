@@ -19,7 +19,7 @@ public class IdentityVerifyHistory {
     @SequenceGenerator(name = "verify_id_sequence", sequenceName = "verify_id_sequence")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "verify_id_sequence")
     private Long id;
-    private Long customerId;
+    private Long userId;
     private Boolean isFraudster;
     private LocalDateTime created;
 }
