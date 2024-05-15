@@ -21,8 +21,8 @@ public class StudentService {
         studentRepository.saveAndFlush(student);
 
         String url = "http://localhost:8085/verify-check/" + student.getId();
-        IdentityVerifyCheckResponse checkResponse = restTemplate.getForObject(url, IdentityVerifyCheckResponse.class);
-        if (checkResponse.isfraudulentUser()){
+        IdentityVerifyCheckStudentResponse checkStudentResponse = restTemplate.getForObject(url, IdentityVerifyCheckStudentResponse.class);
+        if (checkStudentResponse.isfraudulentUser()){
             throw new IllegalStateException("fraudster");
         }
     }
