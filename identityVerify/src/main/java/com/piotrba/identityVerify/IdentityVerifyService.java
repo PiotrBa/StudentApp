@@ -11,9 +11,9 @@ public class IdentityVerifyService {
 
     private final IdentityVerifyRepository identityVerifyRepository;
 
-    public boolean isFraudulentUser(Long customerId){
+    public boolean isFraudulentUser(Long userId){
         identityVerifyRepository.save(IdentityVerifyHistory.builder()
-                        .userId(customerId)
+                        .userId(userId)
                         .isFraudster(false)
                         .created(LocalDateTime.now())
                 .build());

@@ -18,7 +18,7 @@ public class IdentityVerifyController {
     public IdentityVerifyCheckResponse isFraudster
             (@PathVariable("userId") Long userId){
         boolean isfraudulentUser = identityVerifyService.isFraudulentUser(userId);
-        log.info("Fraud check request for student {}", userId);
+        log.info("Fraud check request for user {}", userId);
         return new IdentityVerifyCheckResponse(isfraudulentUser);
     }
 }

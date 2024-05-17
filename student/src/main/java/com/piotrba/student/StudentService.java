@@ -17,7 +17,6 @@ public class StudentService {
                 .lastName(request.lastName())
                 .email(request.email())
                 .build();
-
         studentRepository.saveAndFlush(student);
 
         String url = "http://localhost:8085/verify-check/" + student.getId();
