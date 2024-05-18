@@ -16,6 +16,7 @@ public class StudentService {
                 .firstName(request.firstName())
                 .lastName(request.lastName())
                 .email(request.email())
+                .userType(UserType.STUDENT)
                 .build();
         studentRepository.saveAndFlush(student);
 
