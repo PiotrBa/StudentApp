@@ -22,4 +22,5 @@ public class IdentityVerifyHistory {
     private Long userId;
     private Boolean isFraudster;
     private LocalDateTime created;
+    private UserType userType;
 }
