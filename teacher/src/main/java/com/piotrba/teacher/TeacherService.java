@@ -6,16 +6,18 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 @AllArgsConstructor
-public class TeacherService {
+public class TeacherService{
 
     private final TeacherRepository teacherRepository;
     private final RestTemplate restTemplate;
+
 
     public void registerTeacher(TeacherRegistrationRequest request){
         Teacher teacher = Teacher.builder()
                 .firstName(request.firstName())
                 .lastName(request.lastName())
                 .email(request.email())
+                .userType(UserType.TEACHER)
                 .build();
         teacherRepository.saveAndFlush(teacher);
 

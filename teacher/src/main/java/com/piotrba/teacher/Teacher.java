@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Teacher {
+public class Teacher{
 
     @Id
     @SequenceGenerator(name = "teacher_id_sequence", sequenceName = "teacher_id_sequence")
@@ -20,4 +20,5 @@ public class Teacher {
     private String firstName;
     private String lastName;
     private String email;
+    private UserType userType;
 }
