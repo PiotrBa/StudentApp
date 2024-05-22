@@ -16,7 +16,7 @@ public class IdentityVerifyController {
             (@PathVariable("userId") Long userId,
              @RequestParam("userType") UserType userType){
         boolean isfraudulentUser = identityVerifyService.isFraudulentUser(userId, userType);
-        log.info("Fraud check request for user {}", userId);
+        log.info("Fraud check request for user {}, type{}", userId, userType);
         return new IdentityVerifyCheckResponse(isfraudulentUser);
     }
 }

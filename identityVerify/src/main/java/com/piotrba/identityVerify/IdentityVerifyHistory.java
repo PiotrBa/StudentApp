@@ -22,5 +22,6 @@ public class IdentityVerifyHistory {
     private Long userId;
     private Boolean isFraudster;
     private LocalDateTime created;
+    @Enumerated(EnumType.STRING)
     private UserType userType;
 }
