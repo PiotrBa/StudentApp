@@ -22,7 +22,7 @@ public class TeacherService{
                 .build();
         teacherRepository.saveAndFlush(teacher);
 
-        String urlTemplate = "http://localhost:8081/verify-check/{userId}";
+        String urlTemplate = "http://localhost:8085/verify-check/{userId}";
         String url = UriComponentsBuilder.fromUriString(urlTemplate)
                 .queryParam("userType", teacher.getUserType().toString())
                 .buildAndExpand(teacher.getId())
