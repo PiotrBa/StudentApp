@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class IdentityVerifyHistory {
+public class IdentityVerify {
 
     @Id
     @SequenceGenerator(name = "verify_id_sequence", sequenceName = "verify_id_sequence")
